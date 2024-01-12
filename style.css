@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(159, 157, 157);
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    margin: 5vh auto;
+    background-color: lightgrey;
+    position: relative;
+}
+
+.ball {
+    background-image: url("ball.png");
+    background-position: center center;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    background-color: rgb(220, 75, 75);
+    border-radius: 50%;
+    position: absolute;
+    animation: animateX 6s linear infinite, animateY 1s ease-out infinite alternate;
+    bottom: 0;
+    left: 0;
+}
+
+@keyframes animateX {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 90%;
+    }
+}
+
+@keyframes animateY {
+    from {
+        bottom: 0;
+    }
+
+    to {
+        bottom: 80%;
+    }
+}
+
+@media only screen and (max-width:456px) {
+
+    .container {
+        width: 95vw;
+        height: 30vh;
+        margin: 10px auto;
+    }
+
+    .ball {
+        width: 40px;
+        height: 40px;
+    }
+
+    @keyframes animateX {
+        from {
+            left: 0;
+        }
+
+        to {
+            left: 90%;
+        }
+    }
+
+    @keyframes animateY {
+        from {
+            bottom: 0;
+        }
+
+        to {
+            bottom: 40%;
+        }
+    }
+}
